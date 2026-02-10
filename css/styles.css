@@ -1142,24 +1142,6 @@ footer[id] {
   pointer-events: none;
 }
 
-.program-title {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  opacity: 0.05;
-  font-family: var(--font-family);
-  font-size: 132px;
-  font-weight: 700;
-  color: var(--color-main);
-  margin: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
 .program-subtitle {
   font-family: var(--font-family);
   font-size: 56px;
@@ -3120,10 +3102,6 @@ hr {
   }
 
   .program-title {
-    display: none;
-  }
-
-  .program-subtitle {
     font-size: 32px;
   }
 
