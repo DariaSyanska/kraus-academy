@@ -14,7 +14,7 @@
   </head>
   <body>
     <main>
-      <!-- Header Mobile Menu -->
+      <!-- Header Mobile Sticky Nav -->
       <header class="mobile-sticky-nav" id="mobile-nav">
         <div class="container mobile-header-flex">
           <div class="hero-logo dark-text">
@@ -35,6 +35,7 @@
         </div>
       </header>
 
+      <!-- Mobile Menu -->
       <div class="mobile-menu-overlay" id="mobile-menu">
         <nav class="mobile-nav-links">
           <a href="#hero">Hero</a>
@@ -64,7 +65,7 @@
       </div>
 
       <!-- Hero Section -->
-      <section class="hero-section" id="hero">
+      <section class="hero-section hero-slide-1" id="hero">
         <div class="container relative-z header-container">
           <div class="hero-wrapper">
             <header class="hero-header desktop-only">
@@ -89,12 +90,12 @@
             </header>
 
             <div class="hero-content">
-              <h1 class="hero-subtitle">
+              <h1 class="hero-subtitle" id="hero-title">
                 Master the profession of a <br />
                 <span class="hero-span">kitchen designer</span> online
               </h1>
               <h2 class="hero-subheading">And Start Earning Remotely</h2>
-              <p class="hero-text">
+              <p class="hero-text" id="hero-desc">
                 Online training from Kraus experts with
                 <span class="hero-text_span"
                   >8+ years of real industry experience.</span
@@ -118,10 +119,26 @@
               </button>
 
               <div class="hero-pagination">
-                <button class="hero-dot active" type="button"></button>
-                <button class="hero-dot" type="button"></button>
-                <button class="hero-dot" type="button"></button>
-                <button class="hero-dot" type="button"></button>
+                <button
+                  class="hero-dot active"
+                  type="button"
+                  aria-label="Go to slide 1"
+                ></button>
+                <button
+                  class="hero-dot"
+                  type="button"
+                  aria-label="Go to slide 2"
+                ></button>
+                <button
+                  class="hero-dot"
+                  type="button"
+                  aria-label="Go to slide 3"
+                ></button>
+                <button
+                  class="hero-dot"
+                  type="button"
+                  aria-label="Go to slide 4"
+                ></button>
               </div>
             </div>
 
@@ -153,7 +170,9 @@
 
       <!-- Course Section -->
       <section class="course-section" id="about-course">
-        <h2 class="course-title">Kraus Academy</h2>
+        <div class="section-bg-title course" aria-hidden="true">
+          Kraus Academy
+        </div>
 
         <div class="container relative-z">
           <h3 class="course-subtitle">
@@ -294,7 +313,9 @@
 
       <!-- About Academy Section -->
       <section class="about-section" id="about-instructor">
-        <h2 class="academy-title">Kraus Academy</h2>
+        <div class="section-bg-title academy" aria-hidden="true">
+          Kraus Academy
+        </div>
         <div class="container relative-z">
           <h3 class="academy-subtitle">
             About The <span class="highlighted">Instructor</span> And The
@@ -424,7 +445,9 @@
 
       <!-- Course Program Section -->
       <section class="program-section" id="course-program">
-        <h2 class="academy-title">Kraus Academy</h2>
+        <div class="section-bg-title program" aria-hidden="true">
+          Kraus Academy
+        </div>
         <div class="container relative-z">
           <h3 class="program-subtitle">
             Course <span class="highlighted">Plans &amp; Program</span>
@@ -732,7 +755,9 @@
 
       <!-- Reviews Section -->
       <section class="reviews-section">
-        <h2 class="reviews-title">Kraus Academy</h2>
+        <div class="section-bg-title reviews" aria-hidden="true">
+          Kraus Academy
+        </div>
 
         <div class="container relative-z">
           <div class="reviews-header">
@@ -899,6 +924,17 @@
               </div>
             </div>
           </div>
+
+          <div class="reviews-arrows">
+            <button class="reviews-arrow prev" aria-label="Previous review">
+              ←
+            </button>
+
+            <button class="reviews-arrow next" aria-label="Next review">
+              →
+            </button>
+          </div>
+
           <div class="scrollbar-container">
             <div class="scrollbar-track">
               <div class="scrollbar-thumb"></div>
@@ -916,7 +952,7 @@
           aria-hidden="true"
           loading="lazy"
         />
-        <h2 class="academy-title">Kraus Academy</h2>
+        <div class="section-bg-title faq" aria-hidden="true">Kraus Academy</div>
         <div class="container relative-z">
           <div class="faq-header">
             <h3 class="faq-subtitle">
@@ -1000,7 +1036,9 @@
 
     <!-- Footer Section -->
     <footer class="footer" id="contacts">
-      <h2 class="footer-title">Kraus Academy</h2>
+      <div class="section-bg-title footer-contacts" aria-hidden="true">
+        Kraus Academy
+      </div>
       <div class="container relative-z">
         <div class="footer-header">
           <h3 class="footer-subtitle">
@@ -1070,7 +1108,7 @@
               </button>
             </form>
           </div>
-          <div class="footer-cards">
+          <address class="footer-cards">
             <nav class="footer-menu">
               <ul class="footer-list">
                 <li class="contact-card">
@@ -1178,9 +1216,9 @@
                 </li>
               </ul>
             </nav>
-          </div>
+          </address>
           <p class="footer-copyright">
-            All rights reserved. Kraus Academy. &copy; 2025
+            All rights reserved. Kraus Academy. &copy; <span id="year"></span>
           </p>
         </div>
       </div>
