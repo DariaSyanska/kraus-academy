@@ -3242,8 +3242,8 @@ hr {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 480px;
-    margin: 32px auto 0;
+    max-width: none;
+    margin: 32px 0 0;
     padding: 0;
     gap: 20px;
     box-sizing: border-box;
@@ -3296,7 +3296,6 @@ hr {
     padding: 0 24px;
     gap: 12px;
   }
-  */
 
   /* Reviews Section */
 
