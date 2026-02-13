@@ -115,11 +115,21 @@ html {
 
 body {
   margin: 0;
-  padding-top: 0;
-  overflow-x: hidden;
   color: var(--color-brand-hover);
   background-color: var(--color-main);
-  font-family: var(--font-family-secondary);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 h1,
@@ -136,11 +146,16 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
+}
+
+address {
+  font-style: normal;
 }
 
 ul {
@@ -198,15 +213,6 @@ section {
 
 .section-bg-title.footer-contacts {
   top: 8px;
-}
-
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-  box-sizing: border-box;
 }
 
 .relative-z {
@@ -270,7 +276,7 @@ footer[id] {
   bottom: 0;
   left: -94px;
   transform: scaleY(-1);
-  background-image: url("../images/leaves.png");
+  background-image: url("../images/decor-hero-leaves.webp");
   background-size: contain;
   background-repeat: no-repeat;
   filter: drop-shadow(0px -2px 6px rgba(0, 0, 0, 0.15));
@@ -280,19 +286,22 @@ footer[id] {
 
 .hero-slide-1 {
   background-image:
-    var(--hero-gradient-overlay), url("../images/hero-section-background.png");
+    var(--hero-gradient-overlay), url("../images/hero-bg-main.webp");
 }
 
 .hero-slide-2 {
-  background-image: var(--hero-gradient-overlay), url("../images/slide-1.jpg");
+  background-image:
+    var(--hero-gradient-overlay), url("../images/hero-slide-01.webp");
 }
 
 .hero-slide-3 {
-  background-image: var(--hero-gradient-overlay), url("../images/slide-2.jpg");
+  background-image:
+    var(--hero-gradient-overlay), url("../images/hero-slide-02.webp");
 }
 
 .hero-slide-4 {
-  background-image: var(--hero-gradient-overlay), url("../images/slide-3.jpg");
+  background-image:
+    var(--hero-gradient-overlay), url("../images/hero-slide-03.webp");
 }
 
 #hero-title,
@@ -314,7 +323,7 @@ footer[id] {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 32px 120px 124px;
+  padding: 24px 120px;
   position: relative;
   z-index: 5;
 }
@@ -859,7 +868,7 @@ footer[id] {
   height: 480px;
   bottom: 0;
   right: -115px;
-  background-image: url("../images/plant.png");
+  background-image: url("../images/decor-instructor-plant.webp");
   background-size: contain;
   background-repeat: no-repeat;
   filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.5));
@@ -1104,8 +1113,8 @@ footer[id] {
   margin-top: 20px;
   min-height: 372px;
   background:
-    linear-gradient(0deg, rgba(18, 6, 5, 0.88) 0%, rgba(18, 6, 5, 0.32) 100%),
-    url(../images/bg-design.png);
+    linear-gradient(180deg, rgba(18, 6, 5, 0.88) 0%, rgba(18, 6, 5, 0.32) 100%),
+    url(../images/order-bg-kitchen.webp);
   background-size: cover;
   background-position: center;
   border-radius: 32px;
@@ -1158,6 +1167,11 @@ footer[id] {
 .order-button:hover {
   transform: scale(1.05);
 }
+
+.order-button:active {
+  transform: scale(0.98);
+}
+
 .order-button svg {
   fill: var(--color-main);
 }
@@ -1197,7 +1211,7 @@ footer[id] {
   bottom: 0;
   left: -160px;
   transform: scaleY(-1);
-  background-image: url("../images/leaves.png");
+  background-image: url("../images/decor-hero-leaves.webp");
   background-size: contain;
   background-repeat: no-repeat;
   filter: drop-shadow(0px -2px 6px rgba(0, 0, 0, 0.15));
@@ -1246,7 +1260,6 @@ footer[id] {
   border-radius: 32px;
   border: 1px solid var(--color-brand-dark);
   background-color: var(--color-brand-hover);
-  box-sizing: border-box;
 }
 
 .card-plan.pro-plan {
@@ -1444,7 +1457,6 @@ hr {
   border-radius: 32px;
   border: 1px solid var(--color-brand-dark);
   background: var(--color-brand-hover);
-  box-sizing: border-box;
 }
 
 .program-column {
@@ -2043,13 +2055,13 @@ hr {
   content: "";
   width: 16px;
   height: 16px;
-  background: url("../images/arrow-close.png") no-repeat center;
+  background: url("../images/ui-arrow-accordion-down.webp") no-repeat center;
   background-size: contain;
 }
 
 .faq-item[open] summary::after {
   content: "";
-  background: url("../images/arrow-open.png") no-repeat center;
+  background: url("../images/ui-arrow-accordion-up.webp") no-repeat center;
   background-size: contain;
 }
 
@@ -2153,7 +2165,6 @@ hr {
   font-size: 16px;
   font-weight: 400;
   color: var(--color-brand-hover);
-  box-sizing: border-box;
 }
 
 .footer-input:focus {
@@ -2252,6 +2263,10 @@ hr {
   transition: opacity 0.3s;
 }
 
+.footer-button:hover {
+  transform: scale(1.05);
+}
+
 .footer-list {
   display: flex;
   align-items: center;
@@ -2295,7 +2310,6 @@ hr {
   text-decoration: none;
   text-align: center;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .footer-link svg {
@@ -2397,19 +2411,73 @@ hr {
   opacity: 0.6;
 }
 
-/* Desktop Logic */
+/* RESPONSIVE LOGIC */
+
+/* Tablet */
 @media (min-width: 769px) {
   .hero-header {
     display: flex;
+    gap: 20px;
   }
 
   .mobile-sticky-nav,
   .mobile-menu-overlay {
     display: none;
   }
+
+  .hero-section_menu {
+    gap: clamp(10px, 2vw, 24px);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.1;
+  }
+
+  .hero-subheading {
+    font-size: clamp(32px, 4vw, 56px);
+  }
+
+  .hero-section_features {
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    gap: 15px;
+  }
+
+  .feature-card {
+    padding: 16px;
+    min-width: 150px;
+  }
+
+  .course-block,
+  .course-info,
+  .footer,
+  .order-section,
+  .reviews-section,
+  .program-section {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
 }
 
-/* --- Mobile Logic --- */
+/* Desktop */
+@media (min-width: 1200px) {
+  .course-block,
+  .course-info,
+  .footer,
+  .order-section,
+  .reviews-section,
+  .program-section {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .hero-section_menu {
+    gap: 24px;
+  }
+}
+
+/* --- Mobile --- */
 @media (max-width: 768px) {
   main {
     padding-top: 72px;
@@ -2417,6 +2485,7 @@ hr {
 
   .hero-header {
     display: none;
+    padding: 24px 20px;
   }
 
   .mobile-sticky-nav {
@@ -2565,7 +2634,6 @@ hr {
     align-items: center;
     padding: 16px 20px !important;
     width: 100%;
-    box-sizing: border-box;
   }
 
   .dark-text {
@@ -2620,7 +2688,7 @@ hr {
         transparent 78%
       ),
       linear-gradient(0deg, #120605 0%, rgba(18, 6, 5, 0.48) 100%),
-      url("../images/hero-section-background.png");
+      url("../images/hero-bg-main.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2650,7 +2718,6 @@ hr {
     width: 100% !important;
     position: relative;
     padding: 16px 20px !important;
-    box-sizing: border-box;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
 
@@ -2700,7 +2767,6 @@ hr {
     align-items: center;
     margin: 0 !important;
     padding: 48px 20px !important;
-    box-sizing: border-box;
   }
 
   .hero-subtitle {
@@ -2789,7 +2855,6 @@ hr {
     align-items: center;
     padding: 56px 0;
     width: 100%;
-    box-sizing: border-box;
   }
 
   .course-subtitle {
@@ -2884,7 +2949,6 @@ hr {
     width: 100% !important;
     border-radius: 32px !important;
     background-color: var(--color-main);
-    box-sizing: border-box;
   }
 
   .info-media {
@@ -2967,7 +3031,6 @@ hr {
     align-items: center;
     padding: 56px 0;
     width: 100%;
-    box-sizing: border-box;
     background:
       radial-gradient(
         circle 600px at -6% -6%,
@@ -3064,14 +3127,12 @@ hr {
   }
 
   /* Order Section */
+
   .order-section {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 56px 0;
-    width: 100%;
-    box-sizing: border-box;
   }
 
   .order-title {
@@ -3079,36 +3140,31 @@ hr {
   }
 
   .booking {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 335px;
-    height: auto;
-    min-height: 352px;
-    gap: 24px;
-    padding: 48px 16px 48px;
-    padding-top: 48px;
-    overflow: hidden;
+    max-width: 100%;
+    height: 352px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 48px 16px;
     box-sizing: border-box;
+    min-height: auto;
+    gap: 24px;
   }
 
   .booking img {
-    position: absolute;
-    top: 48px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    transform: none;
     width: 135px;
+    margin-bottom: 0;
   }
 
   .order-subtitle {
-    font-size: 24px;
-    max-width: 303px;
     margin: 0;
-    margin-top: 100px;
-    padding-top: 0;
-    text-align: center;
+    font-size: 24px;
+    line-height: 1.2;
   }
 
   .order-button {
@@ -3231,7 +3287,6 @@ hr {
     justify-content: center;
     align-items: center;
     align-self: stretch;
-    box-sizing: border-box;
     overflow: visible;
     padding: 56px 0;
     width: 100%;
@@ -3307,7 +3362,6 @@ hr {
     max-width: 100%;
     height: auto;
     min-height: 0;
-    box-sizing: border-box;
     padding: 20px 16px !important;
     gap: 24px;
   }
@@ -3349,7 +3403,6 @@ hr {
     padding: 24px 16px;
     flex-shrink: 0;
     gap: 16px;
-    box-sizing: border-box;
   }
 
   .scrollbar-container {
@@ -3484,7 +3537,6 @@ hr {
     align-items: center;
     padding: 56px 20px 24px 20px;
     width: 100%;
-    box-sizing: border-box;
   }
 
   .footer-subtitle {

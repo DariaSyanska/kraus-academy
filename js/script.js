@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. DESKTOP STICKY HEADER ---
-  if (window.innerWidth > 768) {
+  if (window.innerWidth >= 1024) {
     const originalHeader = document.querySelector(".hero-header");
     if (originalHeader) {
       const headerClone = originalHeader.cloneNode(true);
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       heroSection.classList.add(`hero-slide-${index + 1}`);
 
-      if (window.innerWidth > 768) {
+      if (window.innerWidth >= 1024) {
         featureCards.forEach((card, i) => {
           card.classList.toggle("active", i === index);
         });
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    if (window.innerWidth > 768) {
+    if (window.innerWidth >= 1024) {
       startHeroAutoplay();
     }
   }
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- 5. REVEAL ANIMATION ---
   const revealElements = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && window.innerWidth > 768) {
+  if ("IntersectionObserver" in window && window.innerWidth >= 1024) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -218,6 +218,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const isActive = burgerBtn.classList.toggle("is-active");
       mobileMenu.classList.toggle("active");
       document.body.style.overflow = isActive ? "hidden" : "";
+    });
+
+    mobileMenu.addEventListener("click", (e) => {
+      if (e.target === mobileMenu) {
+        burgerBtn.classList.remove("is-active");
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "";
+      }
     });
 
     mobileMenu.querySelectorAll("a").forEach((link) => {
