@@ -3181,6 +3181,9 @@ hr {
     align-items: center;
     align-self: stretch;
     padding: 56px 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow-x: hidden;
     width: 100%;
     background:
       radial-gradient(
@@ -3251,6 +3254,9 @@ hr {
 
   .course-program-title {
     font-size: 28px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
   }
 
   .course-program-sections {
@@ -3258,16 +3264,18 @@ hr {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 100%;
+    max-width: none;
     padding: 24px 16px;
     box-sizing: border-box;
+    border-left: none;
+    border-right: none;
   }
 
   .program-column {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 100%;
+    max-width: none;
     gap: 16px;
   }
 
