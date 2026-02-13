@@ -2483,6 +2483,11 @@ hr {
     padding-top: 72px;
   }
 
+  .hero-section {
+    background-image:
+      var(--hero-gradient-overlay), url("../images/hero-bg-mobile.webp");
+  }
+
   .hero-header {
     display: none;
     padding: 24px 20px;
