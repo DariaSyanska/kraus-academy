@@ -1,71 +1,36 @@
-# 🎓 Kraus Academy — Educational Landing Page
+# Kraus Academy — Educational Landing Page
 
-Kraus Academy is a fully responsive landing page designed for an online educational course focused on kitchen design.  
-The project demonstrates modern frontend development practices, clean UI/UX design, and mobile-first implementation.
+Kraus Academy is a fully responsive landing page designed for an online educational course focused on kitchen design. 
+The project demonstrates modern frontend development practices, clean UI/UX design, and performance-driven implementation.
 
-🔗 Live Demo: https://dariasyanska.github.io/kraus-academy/
+🔗 **Live Demo:** [https://dariasyanska.github.io/kraus-academy/](https://dariasyanska.github.io/kraus-academy/)
 
 ---
 
 ## ✨ Features
-
-- Responsive layout (mobile, tablet, desktop)
-- Mobile-first approach
-- Clean semantic HTML structure
-- Modern CSS (Flexbox + Grid)
-- Smooth scrolling and micro-interactions
-- Optimized images and fast loading
-- Accessible markup (ARIA labels, semantic tags)
-- GitHub Pages deployment
-
----
-
-## 📚 Sections
-
-The landing page includes:
-
-- Hero section with strong call-to-action
-- Course description
-- Instructor introduction
-- Benefits & features
-- Course program breakdown
-- Student testimonials
-- Contact information
-- Footer with navigation & social links
-
----
+- **Modern Responsive Design:** Adaptive layouts for mobile, tablet, and desktop using CSS Grid and Flexbox.
+- **Performance Optimized:** All assets converted to **WebP format** for lightning-fast loading speeds.
+- **Interactive Experience:** - Dynamic Hero Slider with autoplay logic.
+  - Smooth reveal-on-scroll animations powered by **Intersection Observer API**.
+  - Functional accordion for course program breakdown.
+- **Fluid Typography:** Implementation of the `clamp()` function for seamless text scaling across devices.
+- **Accessibility (A11y):** Semantic HTML5 tags and ARIA labels for screen reader compatibility.
 
 ## 🛠 Tech Stack
+- **HTML5:** Semantic markup.
+- **CSS3:** Custom properties (variables), Flexbox, Grid, and Media Queries.
+- **Vanilla JavaScript:** ES6+ logic for UI components and form handling.
+- **GitHub Pages:** Automated deployment.
 
-- HTML5
-- CSS3 (Flexbox, Grid, responsive media queries)
-- Vanilla JavaScript
-- GitHub Pages (deployment)
-
----
-
-## 📱 Responsiveness
-
-The website is optimized for:
-
-- Mobile devices (≤ 480px)
-- Tablets (≤ 768px)
-- Desktop screens
-
-Techniques used:
-
-- Flexible layouts
-- Adaptive typography
-- Column stacking on mobile
-- Touch-friendly buttons
-
----
+## 📱 Responsiveness Breakdown
+The website is optimized using a mobile-first approach with the following key breakpoints:
+- **Mobile (≤ 768px):** Single column layouts, touch-optimized sticky navigation.
+- **Tablet (769px - 1023px):** Fluid margins and adaptive grid layouts.
+- **Desktop (≥ 1024px):** Full multi-column design with a fixed sticky header clone.
 
 ## 🚀 Getting Started
 
 ### Run locally
-
-Clone the repository:
-
-```bash
-git clone https://github.com/DariaSyanska/kraus-academy.git
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/DariaSyanska/kraus-academy.git](https://github.com/DariaSyanska/kraus-academy.git)
