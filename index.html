@@ -77,6 +77,8 @@
               class="burger-menu"
               id="open-mobile-menu"
               aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
             >
               <span></span><span></span><span></span>
             </button>
@@ -1099,6 +1101,10 @@
           <p class="footer-text">
             Get in touch — we’re here to answer your questions.
           </p>
+          <p class="footer-text" role="note">
+            Concept demo: this form is not connected and does not send messages.
+            Please do not enter personal information.
+          </p>
           <div class="footer-about">
             <span class="footer-line"
               >“Your future doesn’t happen by chance — it begins with the
@@ -1111,6 +1117,7 @@
                   type="text"
                   name="user_name"
                   placeholder="Name"
+                  aria-label="Name (demo form)"
                   required
                 />
                 <input
@@ -1118,6 +1125,7 @@
                   type="email"
                   name="user_email"
                   placeholder="Email"
+                  aria-label="Email (demo form)"
                   required
                 />
                 <input
@@ -1125,6 +1133,7 @@
                   type="text"
                   name="user_message"
                   placeholder="Message"
+                  aria-label="Message (demo form)"
                 />
               </div>
 
@@ -1278,9 +1287,8 @@
 
     <div id="formStatus" class="form-status-overlay">
       <div class="form-status-content">
-        <p>
-          Thank you! Your message
-          <span class="form-status-highlight">has been sent successfully.</span>
+        <p role="status" aria-live="polite">
+          This form is a visual demo. Your message was not sent.
         </p>
         <button type="button" class="close-status" id="closeStatusBtn">
           Close

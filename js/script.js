@@ -214,25 +214,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenu = document.getElementById("mobile-menu");
 
   if (burgerBtn && mobileMenu) {
+    const setMobileMenuOpen = (isOpen) => {
+      burgerBtn.classList.toggle("is-active", isOpen);
+      mobileMenu.classList.toggle("active", isOpen);
+      burgerBtn.setAttribute("aria-expanded", String(isOpen));
+      burgerBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    };
+
     burgerBtn.addEventListener("click", () => {
-      const isActive = burgerBtn.classList.toggle("is-active");
-      mobileMenu.classList.toggle("active");
-      document.body.style.overflow = isActive ? "hidden" : "";
+      setMobileMenuOpen(!burgerBtn.classList.contains("is-active"));
     });
 
     mobileMenu.addEventListener("click", (e) => {
       if (e.target === mobileMenu) {
-        burgerBtn.classList.remove("is-active");
-        mobileMenu.classList.remove("active");
-        document.body.style.overflow = "";
+        setMobileMenuOpen(false);
       }
     });
 
     mobileMenu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        burgerBtn.classList.remove("is-active");
-        mobileMenu.classList.remove("active");
-        document.body.style.overflow = "";
+        setMobileMenuOpen(false);
       });
     });
   }
@@ -245,17 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (contactForm && formStatus) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      const button = this.querySelector(".footer-button");
-      const originalHTML = button.innerHTML;
-      button.textContent = "Sending...";
-      button.disabled = true;
-
-      setTimeout(() => {
-        formStatus.style.display = "flex";
-        button.innerHTML = originalHTML;
-        button.disabled = false;
-        this.reset();
-      }, 1200);
+      formStatus.style.display = "flex";
     });
 
     if (closeStatusBtn) {
